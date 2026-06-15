@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portal - LexWell Solicitors</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="login.css">
+<script defer src="login.js"></script>
+<script defer src="script.js"></script>
+</head>
+
+<body id="body" class="light-theme">
+<header id="header" class="sticky-header">
+    <div class="header-container">
+        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">LEXWELL</a>
+        <div class="theme-toggle" id="themeToggle" title="Toggle Theme">Moon</div>
+        <div class="menu-toggle" id="menuToggle">Menu</div>
+        <nav id="nav" class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#team">Solicitors</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth-container">
+    <section class="portal-showcase fade-in">
+        <p class="portal-kicker">Client Portal</p>
+        <h1>Keep your legal matters organized and secure.</h1>
+        <p class="portal-copy">Sign in to book appointments faster, keep your contact details ready, and prepare for consultations with the LexWell team.</p>
+
+        <div class="portal-highlights">
+            <div class="highlight-card">
+                <strong>Fast booking</strong>
+                <span>Schedule consultations without repeating your details each time.</span>
+            </div>
+            <div class="highlight-card">
+                <strong>Private access</strong>
+                <span>Your client login keeps account access separate and secure on this device.</span>
+            </div>
+            <div class="highlight-card">
+                <strong>Right solicitor</strong>
+                <span>Tell us your issue and we will connect you to the correct legal specialist.</span>
+            </div>
+        </div>
+
+        <div class="demo-panel">
+            <p><strong>Demo access</strong></p>
+            <p>Email: demo@lexwell.com</p>
+            <p>Password: Demo12345</p>
+            <button type="button" class="ghost-button" id="demoLoginBtn">Use Demo Login</button>
+        </div>
+    </section>
+
+    <section class="auth-wrapper">
+        <div class="auth-shell fade-in">
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab active" data-target="loginForm">Sign In</button>
+                <button type="button" class="auth-tab" data-target="signupForm">Create Account</button>
+            </div>
+
+            <div id="loginForm" class="auth-form active fade-in">
+                <h2>Welcome Back</h2>
+                <p class="form-subtitle">Access your client portal and continue your legal journey.</p>
+
+                <form id="signInForm" class="form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="you@example.com" required>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password" data-target="loginPassword">Show</button>
+                        </div>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember me on this device</label>
+                        <a href="#" onclick="alert('Password reset can be connected next.')">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="cta-button">Sign In</button>
+                </form>
+
+                <div class="divider">or</div>
+
+                <button type="button" class="social-button" onclick="alert('Google sign-in can be connected next.')">Continue with Google</button>
+
+                <p class="switch-auth">Need an account? <button type="button" onclick="switchForm('signupForm')">Create one here</button></p>
+            </div>
+
+            <div id="signupForm" class="auth-form fade-in">
+                <h2>Create Account</h2>
+                <p class="form-subtitle">Set up your secure client login in under a minute.</p>
+
+                <form id="createAccountForm" class="form">
+                    <div class="form-group">
+                        <label for="signupFullName">Full Name</label>
+                        <input type="text" id="signupFullName" placeholder="Your full name" required>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" placeholder="you@example.com" required>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPhone">Phone Number</label>
+                        <input type="tel" id="signupPhone" placeholder="+880 1234-567890" required>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signupPassword" placeholder="Create a strong password" required>
+                            <button type="button" class="toggle-password" data-target="signupPassword">Show</button>
+                        </div>
+                        <span class="error-msg"></span>
+                        <div class="password-rules">
+                            <span id="ruleLength">At least 8 characters</span>
+                            <span id="ruleUppercase">1 uppercase letter</span>
+                            <span id="ruleNumber">1 number</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signupConfirmPassword" placeholder="Re-enter your password" required>
+                            <button type="button" class="toggle-password" data-target="signupConfirmPassword">Show</button>
+                        </div>
+                        <span class="error-msg"></span>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <label>
+                            <input type="checkbox" id="agreeTerms" required>
+                            I agree to the Terms and Privacy Policy.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="cta-button">Create Account</button>
+                </form>
+
+                <p class="switch-auth">Already registered? <button type="button" onclick="switchForm('loginForm')">Sign in here</button></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('successModal')">&times;</span>
+        <h2>Success</h2>
+        <p id="modalMessage">Your operation was successful.</p>
+        <button onclick="closeModal('successModal')" class="cta-button">Close</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 LexWell Solicitors | Secure Client Access</p>
+    </div>
+</footer>
+</body>
+</html>
