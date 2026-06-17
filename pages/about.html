@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — LAWLEX</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+
+/* =========================
+ROOT & RESET
+========================= */
+
+:root{
+--primary:#08182f;
+--secondary:#c8a96a;
+--white:#ffffff;
+--light:#f5f5f5;
+--text:#444;
+--transition:.3s ease;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+font-family:'Cormorant Garamond',serif;
+line-height:1.7;
+color:var(--text);
+overflow-x:hidden;
+font-size:20px;
+}
+
+img{ width:100%; display:block; }
+a{ text-decoration:none; }
+ul{ list-style:none; }
+
+/* =========================
+BUTTON
+========================= */
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:var(--secondary);
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font:inherit;
+transition:var(--transition);
+white-space:nowrap;
+}
+.btn:hover{ background:var(--primary); }
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+position:fixed;
+top:0; left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+background:var(--primary);
+box-shadow:0 2px 10px rgba(0,0,0,.2);
+transition:padding var(--transition);
+}
+
+.logo{ color:white; font-size:32px; font-weight:700; }
+
+.nav-links{ display:flex; gap:30px; }
+.nav-links a{ color:white; font-weight:500; transition:var(--transition); }
+.nav-links a:hover,
+.nav-links a.active{ color:var(--secondary); }
+
+.menu-btn{
+display:none;
+width:44px; height:44px;
+border:1px solid rgba(255,255,255,.35);
+border-radius:6px;
+background:rgba(255,255,255,.08);
+color:var(--white);
+cursor:pointer;
+font-size:0;
+transition:var(--transition);
+}
+.menu-btn::before{
+content:"\f0c9";
+font-family:"Font Awesome 6 Free";
+font-size:22px; font-weight:900;
+}
+.menu-btn:hover{ background:var(--secondary); border-color:var(--secondary); }
+
+/* =========================
+PAGE HERO
+========================= */
+
+.page-hero{
+min-height:56vh;
+background:
+  linear-gradient(105deg, rgba(8,24,47,.96) 42%, rgba(8,24,47,.55) 100%),
+  url('https://images.unsplash.com/photo-1505663912202-ac22d4cb3707?auto=format&fit=crop&w=1800&q=80')
+  center/cover no-repeat;
+display:flex;
+align-items:flex-end;
+padding:140px 8% 70px;
+}
+
+.page-hero-content{ color:white; max-width:680px; }
+
+.kicker{
+display:block;
+color:var(--secondary);
+letter-spacing:3px;
+font-weight:700;
+font-size:14px;
+text-transform:uppercase;
+margin-bottom:14px;
+}
+
+.page-hero-content h1{
+font-size:clamp(44px,7vw,76px);
+line-height:1.05;
+margin-bottom:18px;
+}
+
+.page-hero-content p{
+font-size:clamp(17px,2vw,20px);
+color:rgba(255,255,255,.75);
+max-width:520px;
+margin-bottom:28px;
+}
+
+.breadcrumb{
+display:flex; gap:10px; align-items:center;
+font-size:15px; color:rgba(255,255,255,.55);
+}
+.breadcrumb a{ color:var(--secondary); }
+
+/* =========================
+FOUNDING STORY — split layout
+========================= */
+
+.story{
+display:grid;
+grid-template-columns:1fr 1fr;
+min-height:600px;
+}
+
+.story-image{
+position:relative;
+overflow:hidden;
+}
+
+.story-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+/* The signature element: a vertical gold rule + year stamp on the image */
+.story-image::after{
+content:"EST.\A 1999";
+white-space:pre;
+position:absolute;
+top:50%;
+left:32px;
+transform:translateY(-50%);
+color:var(--secondary);
+font-size:13px;
+font-weight:700;
+letter-spacing:3px;
+text-transform:uppercase;
+border-left:3px solid var(--secondary);
+padding-left:14px;
+line-height:2;
+}
+
+.story-content{
+background:var(--primary);
+color:var(--white);
+padding:clamp(60px,8vw,110px) clamp(36px,6vw,90px);
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.story-content .kicker{ margin-bottom:16px; }
+
+.story-content h2{
+color:var(--white);
+font-size:clamp(32px,4vw,48px);
+line-height:1.15;
+margin-bottom:24px;
+}
+
+.story-content h2 em{
+display:block;
+color:var(--secondary);
+font-style:italic;
+}
+
+.story-content p{
+color:rgba(255,255,255,.72);
+font-size:clamp(17px,1.8vw,20px);
+margin-bottom:18px;
+}
+
+.story-content .btn{
+align-self:flex-start;
+margin-top:12px;
+}
+
+/* =========================
+VALUES
+========================= */
+
+.values{
+padding:100px 8%;
+background:var(--light);
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:clamp(30px,4vw,42px);
+color:var(--primary);
+line-height:1.2;
+}
+
+.values-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
+gap:28px;
+}
+
+.value-card{
+background:var(--white);
+border-radius:10px;
+padding:40px 32px;
+box-shadow:0 5px 22px rgba(0,0,0,.07);
+border-top:4px solid transparent;
+transition:border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.value-card:hover{
+border-top-color:var(--secondary);
+transform:translateY(-6px);
+box-shadow:0 14px 36px rgba(0,0,0,.12);
+}
+
+.value-card i{
+font-size:38px;
+color:var(--secondary);
+margin-bottom:20px;
+}
+
+.value-card h3{
+color:var(--primary);
+font-size:22px;
+margin-bottom:10px;
+}
+
+.value-card p{ font-size:17px; }
+
+/* =========================
+STATS BAND
+========================= */
+
+.stats-band{
+background:var(--primary);
+padding:70px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));
+gap:40px;
+text-align:center;
+}
+
+.stat-item h2{
+font-size:clamp(42px,5vw,60px);
+color:var(--secondary);
+line-height:1;
+margin-bottom:8px;
+}
+
+.stat-item p{
+color:rgba(255,255,255,.7);
+font-size:17px;
+font-weight:500;
+letter-spacing:.5px;
+}
+
+/* =========================
+TIMELINE
+========================= */
+
+.timeline-section{
+padding:100px 8%;
+background:var(--white);
+}
+
+.timeline{
+position:relative;
+max-width:820px;
+margin:0 auto;
+}
+
+/* vertical rule */
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+top:0; bottom:0;
+width:2px;
+background:linear-gradient(to bottom, var(--secondary), rgba(200,169,106,.15));
+transform:translateX(-50%);
+}
+
+.tl-item{
+display:grid;
+grid-template-columns:1fr 60px 1fr;
+align-items:start;
+gap:0;
+margin-bottom:56px;
+}
+
+.tl-item:last-child{ margin-bottom:0; }
+
+.tl-left{ text-align:right; padding-right:32px; padding-top:6px; }
+.tl-right{ padding-left:32px; padding-top:6px; }
+
+/* alternate: odd items show content left, even items right */
+.tl-item:nth-child(even) .tl-left{ order:3; text-align:left; padding-right:0; padding-left:32px; }
+.tl-item:nth-child(even) .tl-dot{ order:2; }
+.tl-item:nth-child(even) .tl-right{ order:1; text-align:right; padding-left:0; padding-right:32px; }
+
+.tl-dot{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:0;
+}
+
+.tl-circle{
+width:52px; height:52px;
+border-radius:50%;
+background:var(--primary);
+border:4px solid var(--secondary);
+display:grid;
+place-items:center;
+color:var(--secondary);
+font-size:14px;
+font-weight:700;
+flex-shrink:0;
+}
+
+.tl-year{
+display:none; /* shown via content side */
+}
+/* 
+.tl-content{
+    
+} */
+
+.tl-content .year-label{
+display:inline-block;
+color:var(--secondary);
+font-size:14px;
+font-weight:700;
+letter-spacing:2px;
+margin-bottom:6px;
+}
+
+.tl-content h3{
+color:var(--primary);
+font-size:21px;
+margin-bottom:8px;
+}
+
+.tl-content p{
+font-size:17px;
+color:var(--text);
+line-height:1.65;
+}
+
+/* =========================
+TEAM
+========================= */
+
+.team-section{
+padding:100px 8%;
+background:var(--light);
+}
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+gap:30px;
+}
+
+.team-card{
+background:var(--white);
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 22px rgba(0,0,0,.08);
+transition:transform var(--transition), box-shadow var(--transition);
+}
+
+.team-card:hover{
+transform:translateY(-8px);
+box-shadow:0 16px 40px rgba(0,0,0,.14);
+}
+
+.team-photo{
+position:relative;
+overflow:hidden;
+height:280px;
+}
+
+.team-photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:top;
+transition:transform .5s ease;
+}
+
+.team-card:hover .team-photo img{
+transform:scale(1.04);
+}
+
+.team-info{
+padding:24px 26px 28px;
+}
+
+.team-info h3{
+color:var(--primary);
+font-size:22px;
+margin-bottom:4px;
+}
+
+.team-info .role{
+color:var(--secondary);
+font-size:15px;
+font-weight:700;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-bottom:12px;
+display:block;
+}
+
+.team-info p{
+font-size:16px;
+color:var(--text);
+line-height:1.6;
+margin-bottom:16px;
+}
+
+.team-socials{
+display:flex;
+gap:12px;
+}
+
+.team-socials a{
+width:36px; height:36px;
+border-radius:50%;
+border:1px solid #ddd;
+display:grid;
+place-items:center;
+color:var(--primary);
+font-size:14px;
+transition:var(--transition);
+}
+
+.team-socials a:hover{
+background:var(--secondary);
+border-color:var(--secondary);
+color:var(--white);
+}
+
+/* =========================
+AWARDS
+========================= */
+
+.awards-section{
+padding:80px 8%;
+background:var(--white);
+border-top:1px solid #eee;
+}
+
+.awards-row{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:48px;
+}
+
+.award-item{
+text-align:center;
+max-width:140px;
+}
+
+.award-icon{
+width:72px; height:72px;
+border-radius:50%;
+background:var(--light);
+display:grid;
+place-items:center;
+margin:0 auto 14px;
+}
+
+.award-icon i{
+font-size:30px;
+color:var(--secondary);
+}
+
+.award-item h4{
+color:var(--primary);
+font-size:16px;
+font-weight:700;
+line-height:1.3;
+}
+
+.award-item small{
+color:var(--text);
+font-size:14px;
+}
+
+/* =========================
+CTA BAND
+========================= */
+
+.cta-band{
+background:var(--secondary);
+padding:80px 8%;
+display:grid;
+grid-template-columns:1fr auto;
+gap:40px;
+align-items:center;
+}
+
+.cta-band h2{
+color:var(--white);
+font-size:clamp(26px,4vw,42px);
+line-height:1.15;
+}
+
+.cta-band h2 em{
+font-style:italic;
+color:var(--primary);
+}
+
+.cta-band .btn{
+background:var(--primary);
+padding:18px 40px;
+font-size:18px;
+}
+.cta-band .btn:hover{ background:rgba(8,24,47,.8); }
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:var(--primary);
+color:white;
+padding:80px 8%;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-container h3{ margin-bottom:20px; color:var(--secondary); }
+.footer-container ul li{ margin-bottom:10px; }
+.footer-container a{ color:white; }
+.footer-container a:hover{ color:var(--secondary); }
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:50px; padding-top:24px;
+text-align:center;
+font-size:15px;
+color:rgba(255,255,255,.5);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.story{
+  grid-template-columns:1fr;
+}
+
+.story-image{
+  min-height:380px;
+}
+
+.tl-item{
+  grid-template-columns:40px 1fr;
+  gap:0;
+}
+
+.timeline::before{
+  left:20px;
+  transform:none;
+}
+
+.tl-left{ display:none; }
+.tl-item:nth-child(even) .tl-left{ display:none; }
+.tl-item:nth-child(even) .tl-right{ order:3; text-align:left; padding-left:24px; padding-right:0; }
+.tl-item:nth-child(even) .tl-dot{ order:1; }
+.tl-right{ padding-left:24px; }
+
+.cta-band{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.menu-btn{ display:block; }
+.nav-links{
+  display:none;
+  width:100%;
+  margin-top:8px;
+  padding:18px;
+  flex-direction:column;
+  gap:14px;
+  background:rgba(8,24,47,.96);
+  border-radius:8px;
+}
+.nav-links.active{ display:flex; }
+.navbar{
+  flex-wrap:wrap;
+  padding:16px 20px;
+  position:fixed;
+}
+.navbar > .btn{ display:none; }
+.menu-btn{
+  position:absolute;
+  top:14px; right:20px;
+}
+
+.awards-row{ gap:30px; }
+
+}
+
+@media(max-width:560px){
+
+.story-content{ padding:50px 24px; }
+.stats-band{ gap:28px; }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{
+  animation-duration:.01ms !important;
+  transition-duration:.01ms !important;
+}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar">
+  <a href="../index.html" class="logo">LAWLEX</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="attorneys.html">Practice Areas</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="attorneys.html">Attorneys</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <a href="#" class="btn">Get A Quote</a>
+  <button class="menu-btn" aria-label="Toggle navigation" aria-expanded="false"></button>
+</nav>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <span class="kicker">Our Story</span>
+    <h1>Built on Trust.<br>Driven by Results.</h1>
+    <p>For over 25 years, LAWLEX has stood alongside clients at the moments that matter most — providing clear counsel, resolute representation, and genuine care.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>About</span>
+    </nav>
+  </div>
+</section>
+
+<!-- ===================== FOUNDING STORY ===================== -->
+<div class="story">
+  <div class="story-image">
+    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1000&q=80" alt="LAWLEX founding partners">
+  </div>
+  <div class="story-content">
+    <span class="kicker">Who We Are</span>
+    <h2>A firm founded<br><em>on principle.</em></h2>
+    <p>LAWLEX was established in 1999 by two partners who believed the legal profession had lost sight of the person behind every case. Their conviction was simple: every client deserves a lawyer who listens first and fights hard second.</p>
+    <p>Today we are a team of 50 attorneys across 12 practice areas. Our size gives us the depth of a large firm and the attention of a boutique — and we have never lost sight of what we were built on.</p>
+    <a href="#" class="btn">Meet the Team</a>
+  </div>
+</div>
+
+<!-- ===================== VALUES ===================== -->
+<section class="values">
+  <div class="section-title">
+    <span class="kicker">What Guides Us</span>
+    <h2>Our Core Values</h2>
+  </div>
+  <div class="values-grid">
+
+    <div class="value-card">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>Integrity</h3>
+      <p>We say what we mean and do what we say. Honest counsel — even when the news is difficult — is the foundation of every client relationship we build.</p>
+    </div>
+
+    <div class="value-card">
+      <i class="fa-solid fa-user-shield"></i>
+      <h3>Client First</h3>
+      <p>Your outcome is our measure of success. We listen carefully, advise clearly, and adapt our strategy to your specific circumstances — not a template.</p>
+    </div>
+
+    <div class="value-card">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <h3>Precision</h3>
+      <p>Legal work lives or dies on the details. Our attorneys are thorough, methodical, and leave nothing to chance — from the first document to the final argument.</p>
+    </div>
+
+    <div class="value-card">
+      <i class="fa-solid fa-scale-balanced"></i>
+      <h3>Justice</h3>
+      <p>We believe the law exists to protect people. We take that seriously in every case, regardless of complexity or scale, and we fight until the work is done right.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<div class="stats-band">
+  <div class="stat-item">
+    <h2 class="counter" data-target="50">0</h2>
+    <p>Skilled Attorneys</p>
+  </div>
+  <div class="stat-item">
+    <h2 class="counter" data-target="34000">0</h2>
+    <p>Successful Cases</p>
+  </div>
+  <div class="stat-item">
+    <h2 class="counter" data-target="25">0</h2>
+    <p>Years Experience</p>
+  </div>
+  <div class="stat-item">
+    <h2 class="counter" data-target="12">0</h2>
+    <p>Practice Areas</p>
+  </div>
+</div>
+
+<!-- ===================== TIMELINE ===================== -->
+<section class="timeline-section">
+  <div class="section-title">
+    <span class="kicker">Our Journey</span>
+    <h2>How We Got Here</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-left">
+        <div class="tl-content">
+          <span class="year-label">1999</span>
+          <h3>The Founding</h3>
+          <p>Partners James Whitmore and Eleanor Reid open LAWLEX with a team of four, specialising in family and civil law from a single office in London.</p>
+        </div>
+      </div>
+      <div class="tl-dot"><div class="tl-circle"><i class="fa-solid fa-star"></i></div></div>
+      <div class="tl-right"></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left"></div>
+      <div class="tl-dot"><div class="tl-circle"><i class="fa-solid fa-building"></i></div></div>
+      <div class="tl-right">
+        <div class="tl-content">
+          <span class="year-label">2005</span>
+          <h3>Corporate Division Launched</h3>
+          <p>Growing demand from business clients prompted the launch of a dedicated corporate and commercial practice, doubling headcount within two years.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left">
+        <div class="tl-content">
+          <span class="year-label">2011</span>
+          <h3>National Recognition</h3>
+          <p>LAWLEX is named Regional Law Firm of the Year for the first time, recognising consistent client outcomes across criminal, civil, and corporate practice.</p>
+        </div>
+      </div>
+      <div class="tl-dot"><div class="tl-circle"><i class="fa-solid fa-award"></i></div></div>
+      <div class="tl-right"></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left"></div>
+      <div class="tl-dot"><div class="tl-circle"><i class="fa-solid fa-globe"></i></div></div>
+      <div class="tl-right">
+        <div class="tl-content">
+          <span class="year-label">2018</span>
+          <h3>International Expansion</h3>
+          <p>We open our second office and establish international partnerships to support clients with cross-border business, immigration, and tax matters.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-left">
+        <div class="tl-content">
+          <span class="year-label">2024</span>
+          <h3>50 Attorneys Strong</h3>
+          <p>LAWLEX reaches 50 attorneys across 12 practice areas — and remains committed to the same values that guided those first four desks in 1999.</p>
+        </div>
+      </div>
+      <div class="tl-dot"><div class="tl-circle"><i class="fa-solid fa-flag"></i></div></div>
+      <div class="tl-right"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== TEAM ===================== -->
+<section class="team-section">
+  <div class="section-title">
+    <span class="kicker">The People</span>
+    <h2>Senior Leadership</h2>
+  </div>
+  <div class="team-grid">
+
+    <div class="team-card">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="James Whitmore">
+      </div>
+      <div class="team-info">
+        <h3>James Whitmore</h3>
+        <span class="role">Managing Partner</span>
+        <p>25 years specialising in corporate law and high-value commercial disputes. Called to the Bar in 1997.</p>
+        <div class="team-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Eleanor Reid">
+      </div>
+      <div class="team-info">
+        <h3>Eleanor Reid</h3>
+        <span class="role">Senior Partner, Family Law</span>
+        <p>Co-founder of LAWLEX and one of the region's most respected family law practitioners, with 1,200+ cases handled.</p>
+        <div class="team-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Michael Brown">
+      </div>
+      <div class="team-info">
+        <h3>Michael Brown</h3>
+        <span class="role">Head of Criminal Defence</span>
+        <p>Former Crown Prosecutor with a 91% acquittal rate in contested trials. Joined LAWLEX in 2008.</p>
+        <div class="team-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Priya Sharma">
+      </div>
+      <div class="team-info">
+        <h3>Priya Sharma</h3>
+        <span class="role">Head of Corporate & IP</span>
+        <p>Advises FTSE-listed companies and startups alike on M&A, governance, and intellectual property strategy.</p>
+        <div class="team-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== AWARDS ===================== -->
+<section class="awards-section">
+  <div class="section-title">
+    <span class="kicker" style="display:block;color:var(--secondary);letter-spacing:3px;font-weight:700;font-size:14px;text-transform:uppercase;margin-bottom:12px;">Recognition</span>
+    <h2>Awards & Accreditations</h2>
+  </div>
+  <div class="awards-row">
+
+    <div class="award-item">
+      <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
+      <h4>Law Firm of the Year</h4>
+      <small>2011, 2016, 2022</small>
+    </div>
+
+    <div class="award-item">
+      <div class="award-icon"><i class="fa-solid fa-star"></i></div>
+      <h4>Top Rated — Chambers UK</h4>
+      <small>Consecutive 10 years</small>
+    </div>
+
+    <div class="award-item">
+      <div class="award-icon"><i class="fa-solid fa-certificate"></i></div>
+      <h4>ISO 9001 Certified</h4>
+      <small>Quality Management</small>
+    </div>
+
+    <div class="award-item">
+      <div class="award-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h4>Legal 500 Recommended</h4>
+      <small>6 practice areas</small>
+    </div>
+
+    <div class="award-item">
+      <div class="award-icon"><i class="fa-solid fa-handshake"></i></div>
+      <h4>Pro Bono Excellence</h4>
+      <small>Law Society Award 2023</small>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<div class="cta-band">
+  <h2>Ready to work with a team<br>that puts you <em>first?</em></h2>
+  <a href="#" class="btn">Book a Free Consultation</a>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-container">
+    <div>
+      <h3>LAWLEX</h3>
+      <p>Trusted legal professionals serving clients with excellence since 1999.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="practice-areas.html">Practice Areas</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Practice Areas</h3>
+      <ul>
+        <li>Family Law</li>
+        <li>Corporate Law</li>
+        <li>Business Law</li>
+        <li>Criminal Law</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>info@lawlex.com</p>
+      <p>+44 123 456 789</p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 LAWLEX. All rights reserved.</div>
+</footer>
+
+<!-- ===================== SCRIPT ===================== -->
+<script>
+
+/* --- NAVBAR MOBILE --- */
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+if(menuBtn){
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuBtn.setAttribute("aria-expanded", navLinks.classList.contains("active"));
+  });
+}
+
+/* --- COUNTER ANIMATION --- */
+const counters = document.querySelectorAll(".counter");
+let counted = false;
+
+const runCounters = () => {
+  if(counted) return;
+  const band = document.querySelector(".stats-band");
+  if(!band) return;
+  const rect = band.getBoundingClientRect();
+  if(rect.top < window.innerHeight - 80){
+    counted = true;
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let count = 0;
+      const speed = target / 120;
+      const update = () => {
+        if(count < target){
+          count += speed;
+          counter.innerText = Math.floor(count).toLocaleString();
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+      update();
+    });
+  }
+};
+
+window.addEventListener("scroll", runCounters);
+runCounters();
+
+/* --- SCROLL REVEAL --- */
+const reveals = document.querySelectorAll(
+  ".value-card, .team-card, .award-item, .tl-item"
+);
+
+const style = document.createElement("style");
+style.textContent = `
+  .reveal-item { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal-item.in { opacity:1; transform:translateY(0); }
+`;
+document.head.appendChild(style);
+
+if("IntersectionObserver" in window){
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add("in");
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold:0.1 });
+
+  reveals.forEach((el, i) => {
+    el.classList.add("reveal-item");
+    el.style.transitionDelay = (i % 4) * 80 + "ms";
+    obs.observe(el);
+  });
+}
+
+</script>
+</body>
+</html>
