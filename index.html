@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lexwell Legal Services</title>
@@ -13,50 +12,32 @@
 
 <body>
 
-    {% if messages %}
-    <div class="message-container">
-        {% for message in messages %}
-            <div class="message {{ message.tags }}">{{ message }}</div>
-        {% endfor %}
-    </div>
-    {% endif %}
-
     <!-- ================= NAVBAR ================= -->
 
-    <!-- ================= NAVBAR ================= -->
-    <!-- ================= NAVBAR ================= -->
-<!-- ================= NAVBAR ================= -->
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <a class='logo-link' href="index.html">Lexwell</a>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a class='logo-link' href="index.html">Lexwell</a>
+            </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#ourService">Services</a></li>
-            <li><a href="#aboutFirm">About</a></li>
-            <li><a href="#Questions">Questions</a></li>
-            <li><a href="#Appointment">Appointment</a></li>
-            <li><a href="#Pricing_id">Pricing</a></li>
-            <li><a href="#newBlog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="practice.html">Practice Areas</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="attorneys.html">Attorneys</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-        <!-- <button  class="btn">
-        <a href="mk.html" class="btn popup-trigger navbar-quote" data-title="Free Legal Consultation"
-            data-body="Lexwell Legal Services provides personalised advice across immigration, family, property, employment and civil law. Book your free 15 minute consultation with the MK Adams Solicitors contact centre today.">
-            MK Adams
-        </a>
-        </button> -->
-        <button class="custom-button" >
-            <a href="mk.html" class="mk" data-title="Free Legal Consultation"
-                data-body="Lexwell Legal Services provides personalised advice across immigration, family, property, employment and civil law. Book your free 15 minute consultation with the MK Adams Solicitors contact centre today.">
+            <!-- <a href="mk.html" class="btn btn-mobile-quote">MK Adams</a> -->
+            <button class="custom-button" >
+                <a href="mk.html" class="mk" data-title="Free Legal Consultation"
+                    data-body="Lexwell Legal Services provides personalised advice across immigration, family, property, employment and civil law. Book your free 15 minute consultation with the MK Adams Solicitors contact centre today.">
                     MK Adams
-            </a>
-        </button>
-    </nav>
-</header>
+                </a>
+            </button>
+        </nav>
+    </header>
 
     <!-- ================= HERO ================= -->
 
@@ -89,7 +70,7 @@
 
     <section class="practice-areas">
 
-        <div class="section-title" id="ourService">
+        <div class="section-title">
             <h2>Our Services</h2>
         </div>
 
@@ -136,7 +117,7 @@
 
     <!-- ================= ABOUT ================= -->
 
-    <section class="about" id="aboutFirm">
+    <section class="about">
 
         <div class="about-image">
             <img src="images/about.jpg" alt="">
@@ -167,7 +148,7 @@
 
     <!-- ================= WHY CHOOSE US ================= -->
 
-    <section class="why-us" id="whyChooseUs">
+    <section class="why-us">
 
         <div class="section-title">
             <h2>Compassion, Care &amp; Commitment</h2>
@@ -254,7 +235,7 @@
 
     <!-- ================= FAQ ================= -->
 
-    <section class="faq" id="Questions">
+    <section class="faq">
 
         <div class="section-title">
             <h2>Frequently Asked Questions</h2>
@@ -293,7 +274,7 @@
 
     <!-- ================= APPOINTMENT + TESTIMONIALS ================= -->
 
-    <section class="appointment-reviews" id="Appointment">
+    <section class="appointment-reviews">
 
         <div class="appointment-panel">
 
@@ -304,19 +285,10 @@
                 <em>Appointment</em>
             </h2>
 
-            <form class="appointment-form" method="post" action="{% url 'myapp:booking' %}">
-            {% csrf_token %}
+            <form class="appointment-form">
+
                 <div class="form-row">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                </div>
-                <div class="form-row">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-row">
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                </div>
-                <div class="form-row">
-                    <select name="service" required>
+                    <select required>
                         <option value="">Select Service</option>
                         <option>Immigration &amp; Asylum Law</option>
                         <option>Family &amp; Children Law</option>
@@ -326,22 +298,20 @@
                         <option>Employment Law</option>
                         <option>Licence &amp; Applications</option>
                     </select>
-                </div>
-                <div class="form-row">
-                    <select name="lawyer" required>
+
+                    <select required>
                         <option value="">Select Lawyer</option>
                         <option>John Smith</option>
                         <option>Sarah Johnson</option>
                         <option>Michael Brown</option>
                     </select>
                 </div>
+
                 <div class="form-row">
-                    <input type="date" name="date" required>
-                    <input type="time" name="time" required>
+                    <input type="date" required>
+                    <input type="time" required>
                 </div>
-                <div class="form-row">
-                    <textarea name="message" placeholder="Your Message" rows="4"></textarea>
-                </div>
+
                 <button type="submit">
                     Book an appointment
                 </button>
@@ -411,7 +381,7 @@
 
     <!-- ================= PRICING ================= -->
 
-    <section class="pricing" id="Pricing_id">
+    <section class="pricing">
 
         <div class="section-title">
             <h2>Pricing Plans</h2>
@@ -467,7 +437,7 @@
 
     <!-- ================= BLOG ================= -->
 
-    <section class="blog" id="newBlog">
+    <section class="blog">
 
         <div class="section-title">
             <h2>Latest News</h2>
@@ -513,44 +483,6 @@
 
         </div>
 
-    </section>
-
-    <!-- ================= CONTACT FORM ================= -->
-
-    <section class="contact" id="contact">
-        <div class="section-title">
-            <h2>Contact Lexwell</h2>
-        </div>
-
-        <div class="contact-wrapper">
-            <div class="contact-copy">
-                <p>
-                    Have a question or need legal advice? Send us your details and a short message, and our team
-                    will be in touch as soon as possible.
-                </p>
-            </div>
-
-            <form class="contact-form" method="post" action="{% url 'myapp:contact' %}">
-            {% csrf_token %}
-                <div class="form-row">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                </div>
-
-                <div class="form-row">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-
-                <div class="form-row">
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                </div>
-
-                <div class="form-row">
-                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                </div>
-
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
     </section>
 
     <!-- ================= INFO POPUP ================= -->
@@ -618,7 +550,7 @@
 
     </footer>
 
-    <script src="{% static 'script.js' %}"></script>
+    <script src="script.js"></script>
 
 </body>
 
