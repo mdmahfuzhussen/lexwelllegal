@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexwell Legal Services</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- ================= NAVBAR ================= -->
+
+    <!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a class='logo-link' href="index.html">Lexwell</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#ourService">Services</a></li>
+            <li><a href="#aboutFirm">About</a></li>
+            <li><a href="#Questions">Questions</a></li>
+            <li><a href="#Appointment">Appointment</a></li>
+            <li><a href="#Pricing_id">Pricing</a></li>
+            <li><a href="#newBlog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- <button  class="btn">
+        <a href="mk.html" class="btn popup-trigger navbar-quote" data-title="Free Legal Consultation"
+            data-body="Lexwell Legal Services provides personalised advice across immigration, family, property, employment and civil law. Book your free 15 minute consultation with the MK Adams Solicitors contact centre today.">
+            MK Adams
+        </a>
+        </button> -->
+        <button class="custom-button" >
+            <a href="mk.html" class="mk" data-title="Free Legal Consultation"
+                data-body="Lexwell Legal Services provides personalised advice across immigration, family, property, employment and civil law. Book your free 15 minute consultation with the MK Adams Solicitors contact centre today.">
+                    MK Adams
+            </a>
+        </button>
+    </nav>
+</header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <span>LEGAL SOLUTION</span>
+
+            <h1>
+                Professional, affordable<br>
+                legal support
+            </h1>
+
+            <p>
+                Professional, affordable legal support for individuals and businesses.[cite: 1] Services are provided by appointment only.
+
+            <a href="javascript:void(0)" class="btn popup-trigger" data-title="Free Legal Consultation"
+                data-body="Lexwell Legal Services provides personalised advice across immigration, family, property, employment and civil law. Book your free 15 minute consultation with the MK Adams Solicitors contact centre today.">
+                Learn More
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PRACTICE AREAS ================= -->
+
+    <section class="practice-areas">
+
+        <div class="section-title" id="ourService">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="practice-grid">
+
+            <!-- Primary Legal Services -->
+            <div class="card practice-card">British Passport Application</div>
+            <div class="card practice-card">No Visa required application</div>
+            <div class="card practice-card">Islamic Will</div>
+            <div class="card practice-card">Universal Credit Application</div>
+            <div class="card practice-card">DWP Benefit Claim</div>
+            <div class="card practice-card">All Council benefits Application</div>
+            <div class="card practice-card">Premises licence Applications with council</div>
+            <div class="card practice-card">Taxi Licence application</div>
+            <div class="card practice-card">Uber, just eat and other delivery Accounts applications</div>
+            <div class="card practice-card">Bangladesh Passport and NID Application</div>
+
+            <!-- Hidden initially (Legal & Property) -->
+            <!-- <div class="card practice-card extra-card">Commissioner for Oaths[cite: 1]</div>
+            <div class="card practice-card extra-card">Landlord and Tenants[cite: 1]</div>
+            <div class="card practice-card extra-card">Lease agreement[cite: 1]</div>
+            <div class="card practice-card extra-card">Commercial Property[cite: 1]</div>
+            <div class="card practice-card extra-card">[cite: 1]</div> -->
+            
+            <!-- Hidden initially (Applications & Licenses) -->
+            <!-- <div class="card practice-card extra-card">[cite: 1]</div>
+            <div class="card practice-card extra-card">[cite: 1]</div>
+            <div class="card practice-card extra-card"></div>
+            <div class="card practice-card extra-card">Universal Credit Aplication &amp; DWP Benefit Claim[cite: 1]</div>
+            <div class="card practice-card extra-card">All Council benefits Application[cite: 1]</div>
+            <div class="card practice-card extra-card">[cite: 1]</div>
+            <div class="card practice-card extra-card">[cite: 1]</div>
+            <div class="card practice-card extra-card">[cite: 1]</div> -->
+
+        </div>
+
+        <div class="more-container">
+            <button id="showMoreBtn" class="btn">
+                More Practice Areas
+            </button>
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="aboutFirm">
+
+        <div class="about-image">
+            <img src="images/about.jpg" alt="">
+        </div>
+
+        <div class="about-content">
+
+            <span>ABOUT OUR FIRM</span>
+
+            <h2>Expert Legal Support</h2>
+
+            <p>
+                Lexwell Legal Services offers professional, affordable legal support for individuals and businesses.[cite: 1] We operate alongside the MK Adams Solicitors Contact Center.[cite: 1]
+            </p>
+
+            <ul>
+                <li>Experienced Attorneys</li>
+                <li>Affordable Legal Services</li>
+                <li>Personalized Solutions</li>
+                <li>Free Consultation 15 minutes[cite: 1]</li>
+            </ul>
+
+            <a href="mk.html" class="btn">Read More</a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="why-us" id="whyChooseUs">
+
+        <div class="section-title">
+            <h2>Compassion, Care &amp; Commitment</h2>
+        </div>
+
+        <div class="features">
+
+            <div class="feature">
+                <i class="fa-solid fa-award"></i>
+                <h3>Years Of Experience</h3>
+                <p>Highly experienced legal professionals.</p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Trusted Service</h3>
+                <p>Thousands of satisfied clients.</p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Client Focused</h3>
+                <p>Dedicated to achieving the best outcomes.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONSULTATION ================= -->
+
+    <section class="consultation">
+
+        <div class="section-title">
+            <h2>Schedule A Free Consultation</h2>
+        </div>
+
+        <div class="consult-boxes">
+
+            <div class="consult-item">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>Book A Time</h3>
+            </div>
+
+            <div class="consult-item">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3>Meet A Consultant</h3>
+            </div>
+
+            <div class="consult-item">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h3>Get Legal Advice</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="stat">
+            <h2 class="counter" data-target="50">0</h2>
+            <p>Skilled Attorneys</p>
+        </div>
+
+        <div class="stat">
+            <h2 class="counter" data-target="200">0</h2>
+            <p>Trust Cases</p>
+        </div>
+
+        <div class="stat">
+            <h2 class="counter" data-target="34000">0</h2>
+            <p>Successful Cases</p>
+        </div>
+
+        <div class="stat">
+            <h2 class="counter" data-target="25">0</h2>
+            <p>Years Experience</p>
+        </div>
+
+    </section>
+
+    <!-- ================= FAQ ================= -->
+
+    <section class="faq" id="Questions">
+
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                What legal services do you offer?
+            </div>
+            <div class="answer">
+                <p class="answer-text">Immigration &amp; asylum, family, property, employment, civil litigation, wills
+                    &amp; probate, and a range of application services including passports, visas, licenses, and benefits.[cite: 1]</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                How much does a consultation cost?
+            </div>
+            <div class="answer">
+                <p class="answer-text">We offer a Free Consultation 15 minutes[cite: 1] through the MK Adams Solicitors contact
+                    centre, so you can discuss your case before committing to a service.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">
+                How can I book an appointment?
+            </div>
+            <div class="answer">
+                <p class="answer-text">Complete the booking form below or call us on 01604385352 or 07546276710.[cite: 1] All services are provided by appointment only.[cite: 1]</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ================= APPOINTMENT + TESTIMONIALS ================= -->
+
+    <section class="appointment-reviews" id="Appointment">
+
+        <div class="appointment-panel">
+
+            <span>FOR LEGAL SOLUTION</span>
+
+            <h2>
+                Book An
+                <em>Appointment</em>
+            </h2>
+
+            <form class="appointment-form" method="post" action="{% url 'myapp:booking' %}">
+            {% csrf_token %}
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-row">
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option>Immigration &amp; Asylum Law</option>
+                        <option>Family &amp; Children Law</option>
+                        <option>Property Law</option>
+                        <option>Civil Litigation</option>
+                        <option>Wills &amp; Probate</option>
+                        <option>Employment Law</option>
+                        <option>Licence &amp; Applications</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <select name="lawyer" required>
+                        <option value="">Select Lawyer</option>
+                        <option>John Smith</option>
+                        <option>Sarah Johnson</option>
+                        <option>Michael Brown</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                </div>
+                <div class="form-row">
+                    <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+                </div>
+                <button type="submit">
+                    Book an appointment
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="reviews-panel">
+
+            <span>TESTIMONIALS</span>
+
+            <h2>
+                Customer
+                <em>Reviews</em>
+            </h2>
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial">
+                    <p>
+                        Excellent legal representation and professional service.
+                    </p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80"
+                            alt="John Smith">
+                        <div>
+                            <h3>John Smith</h3>
+                            <small>Businessman</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <p>
+                        The team explained every step clearly and handled my case with care.
+                    </p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80"
+                            alt="Sarah Johnson">
+                        <div>
+                            <h3>Sarah Johnson</h3>
+                            <small>Property Owner</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <p>
+                        Fast responses, strong advice, and a very professional experience.
+                    </p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                            alt="Michael Brown">
+                        <div>
+                            <h3>Michael Brown</h3>
+                            <small>Consultant</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PRICING ================= -->
+
+    <section class="pricing" id="Pricing_id">
+
+        <div class="section-title">
+            <h2>Pricing Plans</h2>
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <h3>Basic</h3>
+                <h2>$99</h2>
+                <ul>
+                    <li>Consultation</li>
+                    <li>Email Support</li>
+                    <li>Legal Advice</li>
+                </ul>
+                <button class="btn popup-trigger" data-title="Basic Plan"
+                    data-body="The Basic plan includes an initial legal consultation, email support, and practical legal advice for simple personal or business matters. Best for clients who need guidance before taking the next step.">
+                    Choose Plan
+                </button>
+            </div>
+
+            <div class="price-card featured">
+                <h3>Professional</h3>
+                <h2>$199</h2>
+                <ul>
+                    <li>Priority Support</li>
+                    <li>Document Review</li>
+                    <li>Legal Consultation</li>
+                </ul>
+                <button class="btn popup-trigger" data-title="Professional Plan"
+                    data-body="The Professional plan adds priority support, document review, and a focused legal consultation. Best for contracts, notices, filings, and matters that need faster attorney attention.">
+                    Choose Plan
+                </button>
+            </div>
+
+            <div class="price-card">
+                <h3>Premium</h3>
+                <h2>$399</h2>
+                <ul>
+                    <li>Full Representation</li>
+                    <li>24/7 Support</li>
+                    <li>Priority Assistance</li>
+                </ul>
+                <button class="btn popup-trigger" data-title="Premium Plan"
+                    data-body="The Premium plan is built for full representation, priority assistance, and ongoing support. Best for complex disputes, negotiations, and cases that need complete legal handling.">
+                    Choose Plan
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= BLOG ================= -->
+
+    <section class="blog" id="newBlog">
+
+        <div class="section-title">
+            <h2>Latest News</h2>
+        </div>
+
+        <div class="blog-grid">
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1505663912202-ac22d4cb3707?auto=format&fit=crop&w=900&q=80"
+                    alt="Law books and legal notes">
+                <h3>How To Select The Right Attorney</h3>
+                <p class="blog-more">
+                    Choose an attorney who has handled cases like yours, communicates clearly, explains fees upfront,
+                    and gives you a realistic strategy. A good consultation should leave you with clear next steps and a
+                    better understanding of your risks.
+                </p>
+                <button class="news-link" type="button">Read More</button>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=80"
+                    alt="Client shaking hands with legal professional">
+                <h3>The Benefits Of Hiring A Lawyer</h3>
+                <p class="blog-more">
+                    A lawyer helps protect your rights, prepare documents correctly, negotiate confidently, and avoid
+                    costly mistakes. Legal support is especially valuable when deadlines, evidence, or court procedures
+                    are involved.
+                </p>
+                <button class="news-link" type="button">Read More</button>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+                    alt="Legal paperwork on an office desk">
+                <h3>Technology In Modern Law</h3>
+                <p class="blog-more">
+                    Modern law firms use secure communication, digital document management, online scheduling, and
+                    research tools to serve clients faster. The right technology improves accuracy while keeping client
+                    privacy protected.
+                </p>
+                <button class="news-link" type="button">Read More</button>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT FORM ================= -->
+
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contact Lexwell</h2>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-copy">
+                <p>
+                    Have a question or need legal advice? Send us your details and a short message, and our team
+                    will be in touch as soon as possible.
+                </p>
+            </div>
+
+            <form class="contact-form" method="post" action="{% url 'myapp:contact' %}">
+            {% csrf_token %}
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-row">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-row">
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= INFO POPUP ================= -->
+
+    <div class="modal" id="infoModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" type="button" aria-label="Close popup" data-close-modal>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <span class="modal-kicker">LEXWELL DETAILS</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalBody"></p>
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <h3>LEXWELL[cite: 1]</h3>
+                <p>
+                    Professional, affordable legal support<br>
+                    for individuals and businesses.[cite: 1]
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Practice Areas</h3>
+
+                <ul>
+                    <li>Immigration &amp; Asylum Law[cite: 1]</li>
+                    <li>Family &amp; Children Law[cite: 1]</li>
+                    <li>Property Law[cite: 1]</li>
+                    <li>Civil Litigation[cite: 1]</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+
+                <p>Unit 3, Rothersthorpe House, 4 Billing Rd, Northampton NN1 5AN[cite: 1]</p>
+                <p>Info@lexwelllegal.co.uk[cite: 1]</p>
+                <p>www.lexwelllegal.co.uk[cite: 1]</p>
+                <p>01604385352[cite: 1] / 07546276710[cite: 1]</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+
+</html>
